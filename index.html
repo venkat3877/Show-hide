@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show/Hide Password</title>
+    <style>
+      #container {
+        height: 200px;
+        width: 500px;
+        box-shadow: 0px 0px 10px black;
+        text-align: center;
+        margin: 10px auto;
+        padding-top: 150px;
+      }
+      h2 {
+        text-align: center;
+        padding-top: 100px;
+      }
+    </style>
+    <script>
+        function showhidefunc(){
+            var buttontext=document.getElementById("but").innerText
+            if(buttontext=="Show Password"){
+                var inp=document.getElementById("pass")
+                inp.type="text"
+                document.getElementById("but").innerText="Hide Password"
+
+            }else{
+                var inp=document.getElementById("pass")
+                inp.type="password"
+                document.getElementById("but").innerText="Show Password"
+
+            }
+        
+        }
+
+    </script>
+  </head>
+  <body>
+    <h2>Show/Hide Password</h2>
+    <div id="container">
+      Enter Text:
+      <input id="pass" type="password" />
+      <button id="but" onclick="showhidefunc()">Show Password</button>
+    </div>
+  </body>
+</html>
